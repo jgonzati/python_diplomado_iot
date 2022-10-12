@@ -49,4 +49,4 @@ while i < num:
 
 print("Cantidad Animales: ", c_animal)
 print("Cantidad Vegetales: ", c_vegetal)
-print("Cantidad no validas: ", c_no_valido)
+print("Cantidad no válidas: ", c_no_valido)

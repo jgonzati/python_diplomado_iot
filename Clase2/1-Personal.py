@@ -27,4 +27,4 @@ while Cpesos < Mpesos and Cbenefactores < Nbenefactores:
     Cbenefactores += 1
 
 print("El monto mayor donado corresponde a:")
-print("El benefactor ", nameM, " dono un monto de: ", montoM)
+print("El benefactor ", nameM, " donó un monto de: ", montoM)

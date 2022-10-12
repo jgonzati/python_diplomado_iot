@@ -5,7 +5,7 @@ def invertir_digitos(num):
     return num[::-1]
 
 # ----
-num = input("Ingresar numero: ")
+num = input("Ingresar número: ")
 print("El valor ingresado es: ", num)
 num2 = invertir_digitos(num)
 print("El valor invertido es: ", num2)

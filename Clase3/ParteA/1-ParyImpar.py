@@ -5,5 +5,5 @@ def es_par(numero):
     return numero%2 == 0
 
 #-------
-num = int(input("Ingresar Numero: "))
+num = int(input("Ingresar Número: "))
 print(es_par(num))

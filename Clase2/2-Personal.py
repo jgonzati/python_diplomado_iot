@@ -12,7 +12,7 @@ nclave: int = 0  #contador de digitos de clave
 menor = 0
 last = 0
 digito = ''
-num = input("Ingresa numeros al azar: ")
+num = input("Ingresa números al azar: ")
 largo = len(num)
 
 i = 0

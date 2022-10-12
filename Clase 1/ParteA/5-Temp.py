@@ -7,5 +7,5 @@ FTemp = float(input("Temp en Farenheit: "))
 
 Ctemp = (FTemp -32)*(5/9)
 
-print("Los ", FTemp, " F en grados Celsius son ", round(Ctemp,2), 'ºC')
+print("Los ", FTemp, " F en grados Celcius son ", round(Ctemp,2), 'ºC')
 

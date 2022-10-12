@@ -8,5 +8,5 @@ num = num//10
 digito = digito+str(num%10)
 num = num // 10
 digito = digito + str(num%10)
-print("El numero invertido es: "+digito)
+print("El número invertido es: "+digito)
 

@@ -3,7 +3,7 @@
 
 count = 0
 i = 2
-num = int(input("Ingrese Numero: "))
+num = int(input("Ingrese número: "))
 
 while i < num:
     if num%i == 0:
@@ -11,6 +11,6 @@ while i < num:
     i += 1
 
 if count > 0:
-    print("El numero es compuesto")
+    print("El número es compuesto")
 else:
-    print("El numero es primo")
+    print("El número es primo")

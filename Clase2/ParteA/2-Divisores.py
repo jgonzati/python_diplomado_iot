@@ -5,11 +5,11 @@
 state = True
 
 while state:
-    num = int(input("Ingrese un numero: "))
+    num = int(input("Ingrese un número: "))
     if num > 0:
         state = False
     else:
-        print("Error, debe ingresar un numero mayor a 0")
+        print("Error, debe ingresar un número mayor a 0")
 
 i = 1
 

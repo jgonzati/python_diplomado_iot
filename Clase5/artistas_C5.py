@@ -19,8 +19,8 @@ artistas_por_dia = {
 
 
 
-dia = input('Ingrese dia: ')
-print('Ese dia se presentaran', cantidad_de_artistas(dia), 'artistas')
-print('El primer artista del dia sera', nombre_primer_artista(dia))
-print('El ultimo artista del dia viene de', pais_origen_ultimo(dia))
-print('Ese dia el concierto completo durara', tiempo_total(dia),'minutos')
+dia = input('Ingrese día: ')
+print('Ese día se presentarán', cantidad_de_artistas(dia), 'artistas')
+print('El primer artista del día será', nombre_primer_artista(dia))
+print('El último artista del día viene de', pais_origen_ultimo(dia))
+print('Ese día el concierto completo durará', tiempo_total(dia),'minutos')

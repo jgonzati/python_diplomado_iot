@@ -4,7 +4,7 @@
 #- Si el número es par, se debe dividir por 2
 #- Si el número es impar, se debe multiplicar por 3 y sumarle 1.
 
-num = int(input("Ingresar numero: "))
+num = int(input("Ingresar número: "))
 
 while num != 1:
     if num%2 == 0:
