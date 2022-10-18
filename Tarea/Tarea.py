@@ -1,38 +1,38 @@
 #Modulo 2
 #Tarea Final
 #Grupo 5
-#16 Oct
 
 import random
 import time
 #Datos
 
-t_ventana = int(input("Ingresa Ventana de medición en seg: "))
-t_muestreo = int(input("Ingresa periodo de muestreo en seg: "))
-spT = int(input("Set Point de Tempertatura en [ºC]:  "))
-dt = 0  #contador de tiempo
-Calefactor = True
+ventanaTiempo = int(input("Ingresa Ventana de medición en seg: "))
+tiempoMuestreo = int(input("Ingresa periodo de muestreo en seg: "))
+temperatureSetPoint = int(input("Set Point de Tempertatura en [ºC]:  "))
+ellapsedTime = 0  #contador de tiempo
+estadoCalefactor = False
 
 #
-T_k = random.randint(0, 35) #temperatura actual
-print('Temperatura inicial : {} ºC'.format(T_k))
-Log = open('log_Tinit_{}_Tcalefactor_{}_tTotal_{}_tMuestreo_{}.csv'.format(T_k,spT,t_ventana,t_muestreo),'w')
+temperaturaActual = random.randint(0, 35) #temperatura actual
+print('Temperatura inicial : {} ºC'.format(temperaturaActual))
+Log = open('log_Tinit_{}_Tcalefactor_{}_tTotal_{}_tMuestreo_{}.csv'.format(temperaturaActual,temperatureSetPoint,ventanaTiempo,tiempoMuestreo),'w')
 
-while dt < t_ventana:
-    deltaT = round(random.uniform(0, 2), 2)  # delta de temp
-
-    if Calefactor:
-        T_k += deltaT
+while ellapsedTime < ventanaTiempo:
+    deltaTemperatura = round(random.uniform(0, 2), 2)  # delta de temp
+    estadoCalefactorString = ""
+    if temperaturaActual < temperatureSetPoint:
+        estadoCalefactor = True
+        estadoCalefactorString = "encendido"
     else:
-        T_k -= deltaT
-
-    if T_k < spT:
-        Calefactor = True
+        estadoCalefactor = False
+        estadoCalefactorString = "apagado"
+    if estadoCalefactor:
+        temperaturaActual += deltaTemperatura
     else:
-        Calefactor = False
-    print(round(T_k,2), Calefactor)
-    dt += t_muestreo
-    Log.write('{};{}\n'.format(round(T_k,2),Calefactor))
-    time.sleep(t_muestreo)
+        temperaturaActual -= deltaTemperatura
+    print("Temperatura actual:",round(temperaturaActual,2), "con el calefactor",estadoCalefactorString)
+    ellapsedTime += tiempoMuestreo
+    Log.write('{};{}\n'.format(round(temperaturaActual,2),estadoCalefactor))
+    time.sleep(tiempoMuestreo)
 print('Fin de medición')
 Log.close()
